@@ -1,13 +1,92 @@
-body {
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+html{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: #000;
+  color: whitesmoke;
+}
+body{
+  /* min-height: 100vh; */
+  /* min-width: 100vw; */
+  font-size: 3rem;
+  display: grid;
+  place-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+input,
+button {
+  font: inherit;
+  padding: 0.5rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  min-width: 90vw;
+  /* margin-right: 1rem; */
+  
+  padding: 0 10% 10%;
+}
+form{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2%;
+}
+article{
+  border: 0.1rem solid goldenrod;
+  margin-top: 0.5rem;
+  padding: 2%;
+}
+
+input, textarea {
+  text-align: left;
+  /* max-width: 2.5em; */
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+button {
+  font-size: 1rem;
+  margin: 0.5em 0 0.5em 0;
+  min-width: 1em;
+}
+
+h2{
+  font-size: 2.5rem;
+}
+h3, label{
+  font-size: 1.5rem;
+}
+p{
+  font-size: 1rem;
+}
+.reactionButton{
+  background-color: rgba(255,255,255, 0.01);
+  border: none;
+  color: whitesmoke;
+  padding-right:0.2rem;
+  cursor: pointer;
+}
+.reactionButton:hover{
+  scale: 1.2;
+}
+.postCredit{
+  font-style: italic;
+  margin-top: 0.6rem;
+}
+button:first-child {
+  margin-left: 0;
 }
