@@ -31,7 +31,7 @@ const PostsList = () => {
     <>
     
         <section>
-        <h2>Posts</h2>
+        <h3>Posts</h3>
                 {content}
         </section>
    </>
