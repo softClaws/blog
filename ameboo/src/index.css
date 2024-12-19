@@ -104,12 +104,13 @@ header {
   color: whitesmoke;
   position: sticky;
   top: 0;
+  min-width: 100vw;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 nav ul {
@@ -128,4 +129,23 @@ nav a, nav a:visited {
 
 nav a:hover, nav a:focus {
   text-decoration: underline;
+}
+.userLists{
+  font-size: 1rem;
+}
+.userPage{
+  font-size: 0.6em;
+  display: flex;
+  justify-content: "center";
+  align-content: "right";
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.userPostTitle{
+  font-size: 1em;
+  padding-bottom: 0.6rem ;
+}
+.deleteButton{
+  background-color: red;
+  color: snow;
 }
