@@ -4,36 +4,7 @@ import axios from 'axios'
 
 const POST_URL = 'https://jsonplaceholder.typicode.com/posts'
 
-// const initialState =[
-//     {
-//         id: '1', 
-//         title: ' Learning redux', 
-//         content: 'blah blah blah...',
-//         date: sub(new Date(), {minutes: 10}).toISOString(),
-//         reactions:{
-//             thumpsUp: 0,
-//             heart: 0,
-//             wow: 0,
-//             happy: 0,
-//             sad:0
-//         }
-        
-//     },
-//     {
-//         id: '2', 
-//         title: ' Learning cake',
-//         content: 'tik tok cha...',
-//         date: sub(new Date(), {minutes: 5}).toISOString(),
-//         reactions:{
-//             thumpsUp: 0,
-//             heart: 0,
-//             wow: 0,
-//             happy: 0,
-//             sad:0
-//         }
-//     },
-    
-// ]
+
 const postsAdapter = createEntityAdapter({
     sortComparer: (a,b) => b.date.localeCompare(a.date)
 })
@@ -80,29 +51,6 @@ const postsSlice = createSlice({
     name: 'posts',
     initialState,
     reducers:{
-        // postAdded:{
-        //     reducer(state, action){
-        //         state.posts.push(action.payload)
-        //     },
-        //     prepare(title,content, userId){
-        //         return{
-        //             payload:{
-        //                 id: nanoid(),
-        //                 title,
-        //                 content,
-        //                 userId,
-        //                 date: new Date().toISOString(),
-        //                 reactions:{
-        //                     thumpsUp: 0,
-        //                     heart: 0,
-        //                     wow: 0,
-        //                     happy: 0,
-        //                     sad:0
-        //                 }
-        //             }
-        //         }
-        //     }
-        // },
         reactionAdded(state, action){
             const {postId, reaction} = action.payload
             const existingPost = state.entities[postId]
